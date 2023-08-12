@@ -48,8 +48,9 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("AbhiModszYT_Return")
                 await self.one.join_chat("AmBotYT")
+                await self.one.join_chat("AM_YTSupport")
+                await self.one.join_chat("AbhiModszYT_Return")
             except:
                 pass
             assistants.append(1)
@@ -58,15 +59,8 @@ class Userbot(Client):
             self.one.id = get_me.id
             self.one.mention = get_me.mention
             assistantids.append(get_me.id)
-            if get_me.last_name:
-                self.one.name = (
-                    get_me.first_name + " " + get_me.last_name
-                )
-            else:
-                self.one.name = get_me.first_name
-            LOGGER(__name__).info(
-                f"Assistant Started as {self.one.name}"
-            )
+            self.one.name = get_me.first_name + (get_me.last_name or "")
+
             try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
@@ -76,11 +70,15 @@ class Userbot(Client):
                     f"Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
                 )
                 sys.exit()
+            LOGGER(__name__).info(
+                f"Assistant Started as {self.one.name}"
+            )
         if config.STRING2:
             await self.two.start()
             try:
                 await self.two.join_chat("AmBotYT")
-                await self.two.join_chat("AmBotYT")
+                await self.two.join_chat("AM_YTSupport")
+                await self.two.join_chat("AbhiModszYT_Return")
             except:
                 pass
             assistants.append(2)
@@ -89,12 +87,8 @@ class Userbot(Client):
             self.two.id = get_me.id
             self.two.mention = get_me.mention
             assistantids.append(get_me.id)
-            if get_me.last_name:
-                self.two.name = (
-                    get_me.first_name + " " + get_me.last_name
-                )
-            else:
-                self.two.name = get_me.first_name
+            self.two.name = get_me.first_name + (get_me.last_name or "")
+
             try:
                 await self.two.send_message(
                     config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴡᴏ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.two.id}`\n❄ ɴᴀᴍᴇ : {self.two.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.two.username}"
@@ -111,7 +105,8 @@ class Userbot(Client):
             await self.three.start()
             try:
                 await self.three.join_chat("AmBotYT")
-                await self.three.join_chat("AmBotYT")
+                await self.three.join_chat("AM_YTSupport")
+                await self.three.join_chat("AbhiModszYT_Return")
             except:
                 pass
             assistants.append(3)
@@ -120,12 +115,8 @@ class Userbot(Client):
             self.three.id = get_me.id
             self.three.mention = get_me.mention
             assistantids.append(get_me.id)
-            if get_me.last_name:
-                self.three.name = (
-                    get_me.first_name + " " + get_me.last_name
-                )
-            else:
-                self.three.name = get_me.first_name
+            self.three.name = get_me.first_name + (get_me.last_name or "")
+
             try:
                 await self.three.send_message(
                     config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛʜʀᴇᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.three.id}`\n❄ ɴᴀᴍᴇ : {self.three.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.three.username}"
@@ -142,7 +133,8 @@ class Userbot(Client):
             await self.four.start()
             try:
                 await self.four.join_chat("AmBotYT")
-                await self.four.join_chat("AmBotYT")
+                await self.four.join_chat("AM_YTSupport")
+                await self.four.join_chat("AbhiModszYT_Return")
             except:
                 pass
             assistants.append(4)
@@ -151,12 +143,8 @@ class Userbot(Client):
             self.four.id = get_me.id
             self.four.mention = get_me.mention
             assistantids.append(get_me.id)
-            if get_me.last_name:
-                self.four.name = (
-                    get_me.first_name + " " + get_me.last_name
-                )
-            else:
-                self.four.name = get_me.first_name
+            self.four.name = get_me.first_name + (get_me.last_name or "")
+
             try:
                 await self.four.send_message(
                     config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғᴏᴜʀ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.four.id}`\n❄ ɴᴀᴍᴇ : {self.four.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.four.username}"
@@ -173,7 +161,8 @@ class Userbot(Client):
             await self.five.start()
             try:
                 await self.five.join_chat("AmBotYT")
-                await self.five.join_chat("AmBotYT")
+                await self.five.join_chat("AM_YTSupport")
+                await self.five.join_chat("AbhiModszYT_Return")
             except:
                 pass
             assistants.append(5)
@@ -182,12 +171,8 @@ class Userbot(Client):
             self.five.id = get_me.id
             self.five.mention = get_me.mention
             assistantids.append(get_me.id)
-            if get_me.last_name:
-                self.five.name = (
-                    get_me.first_name + " " + get_me.last_name
-                )
-            else:
-                self.five.name = get_me.first_name
+            self.five.name = get_me.first_name + (get_me.last_name or "")
+
             try:
                 await self.five.send_message(
                     config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ғɪᴠᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.five.id}`\n❄ ɴᴀᴍᴇ : {self.five.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.five.username}"
