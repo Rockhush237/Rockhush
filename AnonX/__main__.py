@@ -23,7 +23,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("am").error(
+        LOGGER("AnonXBot").error(
             "WTF Baby ! Atleast add a pyrogram string, How Cheap..."
         )
         return
@@ -31,7 +31,7 @@ async def init():
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET
     ):
-        LOGGER("am").warning(
+        LOGGER("AnonXBot").warning(
             "Sur spotify id aur secret toh daala hi nahi aapne ab toh spotify se nahi chala paaoge gaane."
         )
     try:
@@ -56,17 +56,17 @@ async def init():
             "https://te.legra.ph/file/0a06ec1226b69e420672c.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("am").error(
+        LOGGER("AnonXBot").error(
             "[ERROR] - \n\nHey Baby, firstly open telegram and turn on voice chat in Logger Group else fu*k off. If you ever ended voice chat in log group i will stop working and users will fu*k you up."
         )
         sys.exit()
     except:
         pass
     await Anon.decorators()
-    LOGGER("AnonX").info("\x53\x6F\x70\x68\x69\x61\x20\x4D\x75\x73\x69\x63\x20\x42\x6F\x74\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6C\x6C\x79\x2E\x2E\x2E\x4E\x6F\x77\x20\x4A\x6F\x69\x6E\x20\x40\x41\x4D\x42\x4F\x54\x59\x54")
+    LOGGER("AnonXBot").info("\x53\x6F\x70\x68\x69\x61\x20\x4D\x75\x73\x69\x63\x20\x42\x6F\x74\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6C\x6C\x79\x2E\x2E\x2E\x4E\x6F\x77\x20\x4A\x6F\x69\x6E\x20\x40\x41\x4D\x42\x4F\x54\x59\x54")
     await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("AnonX").info("Stopping Music Bot...")
+    LOGGER("AnonXBot").info("Stopping Music Bot...")
